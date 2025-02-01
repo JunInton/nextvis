@@ -86,7 +86,7 @@ export default function Home() {
             Meet the Team
           </h2>
           <svg className="size-6 animate-bounce">
-            
+
           </svg>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -163,7 +163,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <footer className="text-center text-foreground/60">
+        <footer className="text-center dark:text-background">
           <p>Built with ❤️ by the oslabs community</p>
         </footer>
       </main>
