@@ -7,8 +7,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
+  { name: 'Main', href: '#', current: true },
+  { name: 'Team', href: '#team', current: false },
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
 ]
@@ -54,7 +54,7 @@ export default function Home() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      item.current ? 'bg-gray-800 text-white' : 'text-white hover:bg-gray-700 hover:text-white',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >
@@ -214,7 +214,7 @@ export default function Home() {
           ))}
         </div>
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-background">
+          <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-foreground dark:text-background">
             Meet the Team
           </h2>
           <svg className="size-6 animate-bounce">
