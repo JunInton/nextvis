@@ -1,23 +1,30 @@
+'use client'
+
 import Image from "next/image";
+
+const toggleTheme = () => {
+  document.documentElement.classList.toggle('dark')
+}
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-white dark:bg-black">
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold tracking-tight mb-6 text-foreground">
-            nextflow
+          <h1 className="text-5xl font-bold tracking-tight mb-6 dark:text-background">
+            NextFlow
           </h1>
-          <p className="text-xl text-foreground/70 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl dark:text-background mb-8 max-w-3xl mx-auto">
             Manage complex middleware chains in your
             next.js codebase
+          <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit dark:bg-background bg-foreground text-background dark:text-foreground hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">Dark Mode</button>
           </p>
           <div className="flex gap-4 justify-center">
             <a
               href="https://github.com/oslabs-beta/NextFlow"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-foreground text-background rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
+              className="px-6 py-3 bg-foreground dark:bg-background text-background dark:text-foreground rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"
@@ -35,7 +42,7 @@ export default function Home() {
             </a>
             <a
               href="/docs"
-              className="px-6 py-3 border border-foreground/20 text-foreground rounded-lg font-medium hover:bg-foreground/5 transition-colors"
+              className="px-6 py-3 border border-foreground/20 text-foreground dark:text-background rounded-lg font-medium hover:bg-foreground/5 transition-colors"
             >
               Documentation
             </a>
@@ -75,34 +82,37 @@ export default function Home() {
           ))}
         </div>
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-background">
             Meet the Team
           </h2>
+          <svg className="size-6 animate-bounce">
+            
+          </svg>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Jun Inton",
-                image: "",
+                image: "/jun.jpg",
                 github: "https://github.com/JunInton",
               },
               {
                 name: "Anthony Noyola",
-                image: "",
+                image: "/anthony.jpg",
                 github: "https://github.com/antwonasn",
               },
               {
                 name: "Sung Jung",
-                image: "",
+                image: "/sung.jpg",
                 github: "https://github.com/sungguk85",
               },
               {
                 name: "Carolina Robinson",
-                image: "",
+                image: "/carolina.jpg",
                 github: "https://github.com/CaroSaFe",
               },
               {
                 name: "Brendan Hoskins",
-                image: "/IMG_0493.jpeg",
+                image: "/brendan.jpeg",
                 github: "https://github.com/BrendanHoskins",
               },
             ].map((member, index) => (

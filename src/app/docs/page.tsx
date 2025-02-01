@@ -14,7 +14,7 @@ export default function Documentation() {
         <div className="prose prose-invert max-w-none">
           <h1>nextFlow README</h1>
           <p>
-            This is the README for your extension "nextFlow". After writing up a
+            This is the README for your extension &quot;nextFlow&quot;. After writing up a
             brief description, we recommend including the following sections.
           </p>
 
@@ -78,7 +78,7 @@ export default function Documentation() {
 
           <h2>Following extension guidelines</h2>
           <p>
-            Ensure that you've read through the extensions guidelines and follow
+            Ensure that you&apos;ve read through the extensions guidelines and follow
             the best practices for creating your extension.
           </p>
 
@@ -104,7 +104,7 @@ export default function Documentation() {
 
           <h2>For more information</h2>
           <ul>
-            <li>Visual Studio Code's Markdown Support</li>
+            <li>Visual Studio Code&apos;s Markdown Support</li>
             <li>Markdown Syntax Reference</li>
           </ul>
 
