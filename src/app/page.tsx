@@ -1,3 +1,4 @@
+
 'use client'
 
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
@@ -140,23 +141,23 @@ export default function Home() {
         </div>
       </DisclosurePanel>
     </Disclosure>
-    <div className="min-h-screen bg-background bg-white dark:bg-black">
+    <div className="min-h-screen bg-foreground dark:bg-background">
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold tracking-tight mb-6 dark:text-background">
+          <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground">
             NextFlow
           </h1>
-          <p className="text-xl dark:text-background mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-background dark:text-foreground mb-8 max-w-3xl mx-auto">
             Manage complex middleware chains in your
             next.js codebase
-          <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit dark:bg-background bg-foreground text-background dark:text-foreground hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">Dark Mode</button>
+          <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit dark:bg-foreground bg-background text-foreground dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">Dark Mode</button>
           </p>
           <div className="flex gap-4 justify-center">
             <a
               href="https://github.com/oslabs-beta/NextFlow"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-foreground dark:bg-background text-background dark:text-foreground rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
+              className="px-6 py-3 bg-background dark:bg-foreground text-foreground dark:text-background rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"
@@ -174,7 +175,7 @@ export default function Home() {
             </a>
             <a
               href="/docs"
-              className="px-6 py-3 border border-foreground/20 text-foreground dark:text-background rounded-lg font-medium hover:bg-foreground/5 transition-colors"
+              className="px-6 py-3 border border-background dark:border-foreground bg-foreground dark:bg-background text-background dark:text-foreground rounded-lg font-medium hover:bg-foreground/5 transition-colors"
             >
               Documentation
             </a>
@@ -203,10 +204,10 @@ export default function Home() {
           ].map((feature, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl border border-foreground/10 hover:shadow-lg transition-shadow bg-background"
+              className="p-6 rounded-xl border border-background/10 hover:shadow-lg transition-shadow bg-foreground dark:bg-background text-background dark:text-foreground"
             >
               <div className="text-3xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">
+              <h3 className="text-xl font-semibold mb-2 text-background dark:text-foreground">
                 {feature.title}
               </h3>
               <p className="text-foreground/70">{feature.description}</p>
@@ -214,7 +215,7 @@ export default function Home() {
           ))}
         </div>
         <div className="mb-20">
-          <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-foreground dark:text-background">
+          <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
             Meet the Team
           </h2>
           <svg className="size-6 animate-bounce">
@@ -250,7 +251,7 @@ export default function Home() {
             ].map((member, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-8 rounded-xl border border-foreground/10 hover:shadow-lg transition-shadow bg-background"
+                className="flex flex-col items-center p-8 rounded-xl border border-foreground/10 hover:shadow-lg transition-shadow bg-foreground dark:bg-background"
               >
                 <div className="w-32 h-32 relative rounded-full overflow-hidden mb-6 bg-foreground/5">
                   <Image
@@ -267,7 +268,7 @@ export default function Home() {
                     }}
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground text-center">
+                <h3 className="text-xl font-semibold text-background dark:text-foreground text-center">
                   {member.name}
                 </h3>
                 <div className="flex gap-4">
@@ -275,7 +276,7 @@ export default function Home() {
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/60 hover:text-foreground transition-colors"
+                    className="text-background dark:text-foreground hover:text-background transition-colors"
                     aria-label={`${member.name}'s GitHub`}
                   >
                     <svg
@@ -295,7 +296,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <footer className="text-center dark:text-background">
+        <footer className="text-center text-background dark:text-foreground">
           <p>Built with ❤️ by the oslabs community</p>
         </footer>
       </main>
