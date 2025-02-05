@@ -20,3 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 
 }
+
+.children {
+  display: inline-block
+}

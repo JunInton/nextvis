@@ -44,7 +44,7 @@ export default function Home() {
               <img
                 alt="Your Company"
                 src="/nextflow.png"
-                className="h-8 w-auto"
+                className="size-8 rounded-full"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -74,7 +74,7 @@ export default function Home() {
               <span className="sr-only">View notifications</span>
               <BellIcon aria-hidden="true" className="size-6" />
             </button>
-
+            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">💡</button>
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
@@ -88,6 +88,7 @@ export default function Home() {
                   />
                 </MenuButton>
               </div>
+              
               <MenuItems
                 transition
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
@@ -150,7 +151,6 @@ export default function Home() {
           <p className="text-xl text-background dark:text-foreground mb-8 max-w-3xl mx-auto">
             Manage complex middleware chains in your
             next.js codebase
-          <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit dark:bg-foreground bg-background text-foreground dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">Dark Mode</button>
           </p>
           <div className="flex gap-4 justify-center">
             <a
