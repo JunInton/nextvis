@@ -10,8 +10,8 @@ import Image from "next/image";
 const navigation = [
   { name: 'Main', href: '#', current: true },
   { name: 'Team', href: '#team', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Projects', href: '/projects', current: false },
+  { name: 'Release Notes', href: '/release', current: false },
 ]
 
 function classNames(...classes: string[]) {
