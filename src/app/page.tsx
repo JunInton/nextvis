@@ -239,7 +239,7 @@ export default function Home() {
                 github: "https://github.com/sungguk85",
               },
               {
-                name: "Carolina Robinson",
+                name: "Carolina Robson",
                 image: "/carolina.jpg",
                 github: "https://github.com/CaroSaFe",
               },
