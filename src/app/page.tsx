@@ -59,7 +59,7 @@ export default function Home() {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-gray-800 text-white' : 'text-white hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      'rounded-md px-3 py-2 text-sm',
                     )}
                   >
                     {item.name}
@@ -73,12 +73,14 @@ export default function Home() {
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
-              {/* <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="size-6" /> */}
             </button>
             <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">💡</button>
-            {/* Profile dropdown */}
+              <a href="/docs"
+              className="px-3 py-2 border border-background dark:border-foreground bg-cyan-300 dark:bg-cyan-300 text-background rounded-full text-sm hover:bg-foreground/5"
+            >
+              Get Started
+            </a>
+              {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
                 {/* <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -179,12 +181,12 @@ export default function Home() {
               </svg>
               GitHub
             </a>
-            <a
+            {/* <a
               href="/docs"
               className="px-6 py-3 border border-background dark:border-foreground bg-foreground dark:bg-background text-background dark:text-foreground rounded-lg font-medium hover:bg-foreground/5 transition-colors"
             >
               Documentation
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
