@@ -265,7 +265,7 @@ export default function Home() {
             ].map((member, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-8 rounded-xl border border-foreground/10 hover:shadow-2xl transition-shadow bg-foreground dark:bg-background dark:border-foreground"
+                className="flex flex-col items-center p-8 rounded-xl border border-background hover:scale-110 transition-shadow bg-foreground dark:bg-background dark:border-foreground"
               >
                 <div className="w-32 h-32 relative rounded-full overflow-hidden mb-6 bg-foreground/5">
                   <Image
