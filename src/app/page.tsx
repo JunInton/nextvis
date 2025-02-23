@@ -1,16 +1,16 @@
 
 'use client'
 
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, DisclosureButton, DisclosurePanel, Menu} from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 import Image from "next/image";
 
 const navigation = [
-  { name: 'Main', href: '#', current: true },
+  { name: 'Main', href: '', current: true },
   { name: 'Team', href: '#team', current: false },
-  { name: 'Projects', href: '/projects', current: false },
+  // { name: 'Projects', href: '/projects', current: false },
   { name: 'Release Notes', href: '/release', current: false },
 ]
 
@@ -41,11 +41,14 @@ export default function Home() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="/nextflow.png"
-                className="size-8 rounded-full"
-              />
+            <Image
+    src="/icon.png"
+    alt="NextVis Logo"
+    width={32}
+    height={32}
+    className="rounded-full"
+    priority // Ensures fast loading for crucial assets
+  />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -70,26 +73,29 @@ export default function Home() {
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
-              <span className="absolute -inset-1.5" />
+              {/* <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="size-6" />
+              <BellIcon aria-hidden="true" className="size-6" /> */}
             </button>
             <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">💡</button>
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                {/* <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  <Image
                     alt="Your Profile"
                     src="/blank-profile.png"
-                    className="size-8 rounded-full"
+                    width={32}
+                    height={32}
+                    className="rounded-full"
+                    loading="lazy"
                   />
-                </MenuButton>
+                </MenuButton> */}
               </div>
               
-              <MenuItems
+              {/* <MenuItems
                 transition
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
@@ -117,7 +123,7 @@ export default function Home() {
                     Sign out
                   </a>
                 </MenuItem>
-              </MenuItems>
+              </MenuItems> */}
             </Menu>
           </div>
         </div>
@@ -146,7 +152,7 @@ export default function Home() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground">
-            NextFlow
+            NextVis
           </h1>
           <p className="text-xl text-background dark:text-foreground mb-8 max-w-3xl mx-auto">
             Manage complex middleware chains in your
@@ -154,7 +160,7 @@ export default function Home() {
           </p>
           <div className="flex gap-4 justify-center">
             <a
-              href="https://github.com/oslabs-beta/NextFlow"
+              href="https://github.com/oslabs-beta/NextVis"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-background dark:bg-foreground text-foreground dark:text-background rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
@@ -204,7 +210,7 @@ export default function Home() {
           ].map((feature, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl border border-background/10 hover:shadow-lg transition-shadow bg-foreground dark:bg-background text-background dark:text-foreground"
+              className="p-6 rounded-xl border border-background dark:border-foreground hover:shadow-lg transition-shadow bg-foreground dark:bg-background text-background dark:text-foreground"
             >
               <div className="text-3xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-background dark:text-foreground">
@@ -213,6 +219,14 @@ export default function Home() {
               <p className="text-foreground/70">{feature.description}</p>
             </div>
           ))}
+          </div>
+        <div className="mb-12">
+          <h2 id ="howTo" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
+            How to...
+          </h2>
+          <video width="1100" height="320" controls>
+            <source src="Video Goes here"></source>
+            </video>
         </div>
         <div className="mb-20">
           <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
@@ -221,7 +235,7 @@ export default function Home() {
           <svg className="size-6 animate-bounce">
 
           </svg>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {[
               {
                 name: "Jun Inton",
@@ -251,7 +265,7 @@ export default function Home() {
             ].map((member, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-8 rounded-xl border border-foreground/10 hover:shadow-lg transition-shadow bg-foreground dark:bg-background"
+                className="flex flex-col items-center p-8 rounded-xl border border-foreground/10 hover:shadow-2xl transition-shadow bg-foreground dark:bg-background dark:border-foreground"
               >
                 <div className="w-32 h-32 relative rounded-full overflow-hidden mb-6 bg-foreground/5">
                   <Image
@@ -259,7 +273,8 @@ export default function Home() {
                     alt={member.name}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 128px) 100vw, 128px"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 80px, (max-width: 1024px) 128px, 160px"
                     style={{
                       objectPosition:
                         member.name === "Brendan Hoskins"
@@ -276,7 +291,7 @@ export default function Home() {
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-background dark:text-foreground hover:text-background transition-colors"
+                    className="text-background dark:text-foreground hover:text-foreground transition-colors"
                     aria-label={`${member.name}'s GitHub`}
                   >
                     <svg

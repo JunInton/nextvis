@@ -10,53 +10,81 @@ export default function Release() {
         >
           ← Back to Home
         </Link>
+        <div className="text-black">
+          <section>
+            <br></br>
+            <p className="font-bold text-lg underline">
+              All notable changes to the NextVis extension will be documented
+              in this file.
+            </p>
+            <br />
 
-        <div className="p-6 max-w-3xl mx-auto bg-white dark:bg-gray-900 rounded-xl shadow-md">
-      <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-        📢 Release Notes – Version x.x.x (Date: Feb 4, 2025)
-      </h1>
+            <p className="font-bold">[1.0.0] - February 8, 2025</p>
+            <span />
+            <p>Initial release</p>
+            <br />
 
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
-          🚀 New Features
-        </h2>
-        <ul className="list-disc pl-5 text-gray-700 dark:text-gray-400">
-          <li>
-            <strong>Dark Mode Support</strong> – Added full support for dark
-            mode to enhance user experience.
-          </li>
-          <li>
-            <strong>Performance Improvements</strong> – Optimized API calls for
-            faster load times.
-          </li>
-        </ul>
-      </section>
+            <p className="font-bold">[0.7.0] - February 6, 2025</p>
+            <span />
+            <p>Changed branding</p>
+            <br />
 
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
-          🛠️ Bug Fixes
-        </h2>
-        <ul className="list-disc pl-5 text-gray-700 dark:text-gray-400">
-          <li>
-            Fixed an issue where the login button was not responding on mobile
-            devices.
-          </li>
-          <li>
-            Resolved an error causing incorrect timestamps in activity logs.
-          </li>
-        </ul>
-      </section>
+            <p className="font-bold">[0.6.1] - February 5, 2025</p>
+            <span />
+            <p>Implemented testing with Jest</p>
+            <br />
 
-      <section>
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
-          🔧 Improvements
-        </h2>
-        <ul className="list-disc pl-5 text-gray-700 dark:text-gray-400">
-          <li>Enhanced UI responsiveness for smaller screen sizes.</li>
-          <li>Improved accessibility for screen reader compatibility.</li>
-        </ul>
-      </section>
-    </div>
+            <p className="font-bold">[0.6.0] - February 1, 2025</p>
+            <span />
+            <p>Improved efficiency of parsing script</p>
+            <br />
+
+            <p className="font-bold">[0.5.0] - January 18, 2025</p>
+            <span />
+            <p>Made parsing script more robust</p>
+            <p>Added mouseover event to nodes</p>
+            <br />
+
+            <p className="font-bold">[0.4.1] - December 11, 2024</p>
+            <span />
+            <p>
+              Fixed formatting issues and receiving issues, extension MVP is
+              working as intended
+            </p>
+            <br />
+
+            <p className="font-bold">[0.4.0] - December 11, 2024</p>
+            <span />
+            <p>Added the parsing script to the extension.ts file</p>
+            <p>Refactored with TypeScript</p>
+            <br />
+
+            <p className="font-bold">[0.3.0] - December 7, 2024</p>
+            <span />
+            <p>Bundled D3 with extension rather than using CDN</p>
+            <br />
+
+            <p className="font-bold">[0.2.0] - December 5, 2024</p>
+            <span />
+            <p>Switched to VS Code extension configuration</p>
+            <br />
+
+            <p className="font-bold">[0.1.1] - November 29, 2024</p>
+            <span />
+            <p>D3 Tree Hierarchy updates (element, text and etc)</p>
+            <br />
+
+            <p className="font-bold">[0.1.0] - November 27, 2024</p>
+            <span />
+            <p>Switched to webpack configuration</p>
+            <br />
+
+            <p className="font-bold">[0.0.1] - November, 2024</p>
+            <span />
+            <p>Initial commits</p>
+            <br />
+          </section>
+        </div>
       </main>
     </div>
   );
