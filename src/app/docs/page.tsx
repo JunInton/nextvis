@@ -219,7 +219,7 @@ Click on Load Extension and select the dist folder.<br></br><br></br>
 <h4>Jun Inton - <a href="https://github.com/JunInton" className="underline text-blue-700">Github</a></h4>
 <h4>Anthony Noyola - <a href="https://github.com/antwonasn" className="underline text-blue-700">Github</a></h4>
 <h4>Sung Jung - <a href="https://github.com/sungguk85" className="underline text-blue-700">Github</a></h4>
-<h4>Carolina Robinson - <a href="https://github.com/CaroSaFe" className="underline text-blue-700">Github</a></h4>
+<h4>Carolina Robson - <a href="https://github.com/CaroSaFe" className="underline text-blue-700">Github</a></h4>
 <h4>Brendan Hoskins - <a href="https://github.com/BrendanHoskins" className="underline text-blue-700">Github</a></h4>
 <br></br>
 <h2><strong>📬 Contact</strong></h2>

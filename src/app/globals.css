@@ -24,3 +24,7 @@ body {
 .children {
   display: inline-block
 }
+
+.carolina .brendan {
+  justify-items: center;
+}
