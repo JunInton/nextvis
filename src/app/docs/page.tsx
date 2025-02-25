@@ -12,7 +12,7 @@ export default function Documentation() {
         </Link>
 
         <div className="prose prose-invert max-w-none">
-          <h1 className="justify-center text-center text-xl text-black">NextFlow ReadMe</h1>
+          <h1 className="justify-center text-center text-xl text-black">NextVis ReadMe</h1>
           <div>
             <a href="https://babeljs.io/" target="_blank" rel="noreferrer" className="children">
               {" "}
@@ -179,8 +179,8 @@ VS Code Integration: View middleware behavior directly in the editor.<br></br>
 <h3><em>Clone this repository:</em></h3>
 
 -bash<br></br>
-git clone https://github.com/oslabs-beta/NextFlow<br></br>
-cd nextflow
+git clone https://github.com/oslabs-beta/NextVis<br></br>
+cd NextVis
 <br></br>
 <h3><em>Install dependencies:</em></h3>
 -bash<br></br>
