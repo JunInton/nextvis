@@ -3,6 +3,8 @@
 
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { MdDarkMode } from "react-icons/md";
+// import { MdOutlineDarkMode } from "react-icons/md";
 
 
 import Image from "next/image";
@@ -12,6 +14,7 @@ const navigation = [
   { name: 'Team', href: '#team', current: false },
   // { name: 'Projects', href: '/projects', current: false },
   { name: 'Release Notes', href: '/release', current: false },
+  { name: 'Article', href:"", current: false},
 ]
 
 function classNames(...classes: string[]) {
@@ -74,7 +77,7 @@ export default function Home() {
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
             </button>
-            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2">💡</button>
+            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-foreground hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"><MdDarkMode/></button>
               <a href="/docs"
               className="px-3 py-2 border border-background dark:border-foreground bg-cyan-300 dark:bg-cyan-300 text-background rounded-full text-sm hover:bg-foreground/5"
             >
@@ -226,9 +229,7 @@ export default function Home() {
           <h2 id ="howTo" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
             How to...
           </h2>
-          <video width="1100" height="320" controls>
-            <source src="Video Goes here"></source>
-            </video>
+            <img src="/fullscreen-demo-gif.gif" width={1280} height={300} className='rounded-xl border border-background dark:border-foreground'></img>
         </div>
         <div className="mb-20">
           <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
