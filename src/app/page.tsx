@@ -154,7 +154,7 @@ export default function Home() {
     <div className="min-h-screen bg-foreground dark:bg-background"> {/* bg-[image:url(/icon.png)] */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 mt-16">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground">
+          <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground p-20">
             NextVis
           </h1>
           <p className="text-xl text-background dark:text-foreground mb-8 max-w-3xl mx-auto">
