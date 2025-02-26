@@ -227,7 +227,7 @@ export default function Home() {
           <h2 id ="howTo" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
             How to...
           </h2>
-            <img src="/fullscreen-demo-gif.gif" width={1280} height={300} className='rounded-xl border border-background dark:border-foreground'></img>
+            <Image src="/fullscreen-demo-gif.gif" width={1280} height={300} className='rounded-xl border border-background dark:border-foreground' alt="fullscreen-demo"/>
         </div>
         <div className="mb-20">
           <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
