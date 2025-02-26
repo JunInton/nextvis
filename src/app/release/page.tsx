@@ -1,7 +1,20 @@
 import Link from "next/link";
 
+// const navigation = [
+//   { name: 'Main', href: '#', current: true },
+//   { name: 'Team', href: '#team', current: false },
+//   // { name: 'Projects', href: '/projects', current: false },
+//   { name: 'Release Notes', href: '/release', current: false },
+//   { name: 'Article', href:"", current: false},
+// ]
+
+// const toggleTheme = () => {
+//   document.documentElement.classList.toggle('dark')
+// }
+
 export default function Release() {
   return (
+    
     <div className="min-h-screen bg-gray-300">
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link

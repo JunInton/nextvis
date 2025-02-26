@@ -4,13 +4,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { MdDarkMode } from "react-icons/md";
-// import { MdOutlineDarkMode } from "react-icons/md";
-
 
 import Image from "next/image";
 
 const navigation = [
-  { name: 'Main', href: '', current: true },
+  { name: 'Main', href: '#', current: true },
   { name: 'Team', href: '#team', current: false },
   // { name: 'Projects', href: '/projects', current: false },
   { name: 'Release Notes', href: '/release', current: false },
@@ -30,9 +28,9 @@ const toggleTheme = () => {
 export default function Home() {
   return (
     <div>
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 fixed w-full top-0 left-0">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-16 items-center justify-between position:fixed top-0">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -45,13 +43,13 @@ export default function Home() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
             <Image
-    src="/icon.png"
-    alt="NextVis Logo"
-    width={32}
-    height={32}
-    className="rounded-full"
-    priority // Ensures fast loading for crucial assets
-  />
+              src="/icon.png"
+              alt="NextVis Logo"
+              width={32}
+              height={32}
+              className="rounded-full"
+              priority // Ensures fast loading for crucial assets
+            />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -77,9 +75,9 @@ export default function Home() {
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
             </button>
-            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-foreground hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"><MdDarkMode/></button>
+            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-background dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"><MdDarkMode/></button>
               <a href="/docs"
-              className="px-3 py-2 border border-background dark:border-foreground bg-cyan-300 dark:bg-cyan-300 text-background rounded-full text-sm hover:bg-foreground/5"
+              className="px-3 py-2 border border-background dark:border-foreground bg-cyan-300 dark:bg-cyan-300 text-foreground rounded-full text-sm hover:bg-foreground/5"
             >
               Get Started
             </a>
@@ -153,8 +151,8 @@ export default function Home() {
         </div>
       </DisclosurePanel>
     </Disclosure>
-    <div className="min-h-screen bg-foreground dark:bg-background">
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="min-h-screen bg-foreground dark:bg-background"> {/* bg-[image:url(/icon.png)] */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 mt-16">
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground">
             NextVis
@@ -241,27 +239,32 @@ export default function Home() {
           <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {[
               {
-                name: "Jun Inton",
+                firstName: "Jun",
+                lastName: "Inton",
                 image: "/jun.jpg",
                 github: "https://github.com/JunInton",
               },
               {
-                name: "Anthony Noyola",
+                firstName: "Anthony",
+                lastName: "Noyola",
                 image: "/anthony.jpg",
                 github: "https://github.com/antwonasn",
               },
               {
-                name: "Sung Jung",
+                firstName: "Sung",
+                lastName: "Jung",
                 image: "/sung.jpg",
                 github: "https://github.com/sungguk85",
               },
               {
-                name: "Carolina Robson",
+                firstName: "Carolina",
+                lastName: "Robson",
                 image: "/carolina.jpg",
                 github: "https://github.com/CaroSaFe",
               },
               {
-                name: "Brendan Hoskins",
+                firstName: "Brendan",
+                lastName: "Hoskins",
                 image: "/brendan.jpeg",
                 github: "https://github.com/BrendanHoskins",
               },
@@ -273,21 +276,24 @@ export default function Home() {
                 <div className="w-32 h-32 relative rounded-full overflow-hidden mb-6 bg-foreground/5">
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={member.firstName}
                     fill
                     className="object-cover"
                     loading="lazy"
                     sizes="(max-width: 640px) 80px, (max-width: 1024px) 128px, 160px"
                     style={{
                       objectPosition:
-                        member.name === "Brendan Hoskins"
+                        member.firstName === "Brendan"
                           ? "center -10px"
                           : "center",
                     }}
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-background dark:text-foreground text-center">
-                  {member.name}
+                  {member.firstName}
+                </h3>
+                <h3 className="text-xl font-semibold text-background dark:text-foreground text-center">
+                  {member.lastName}
                 </h3>
                 <div className="flex gap-4">
                   <a
@@ -295,7 +301,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-background dark:text-foreground hover:text-foreground transition-colors"
-                    aria-label={`${member.name}'s GitHub`}
+                    aria-label={`${member.firstName}'s GitHub`}
                   >
                     <svg
                       className="w-6 h-6"
