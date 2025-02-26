@@ -209,7 +209,7 @@ Click on Load Extension and select the dist folder.<br></br><br></br>
 
 -Fork the project<br></br>
 -Create your feature branch (git checkout -b feature/AmazingFeature)<br></br>
--Commit your changes (git commit -m "Add some AmazingFeature")<br></br>
+-Commit your changes (git commit -m &quot;Add some AmazingFeature&quot;)<br></br>
 -Push to the branch (git push origin feature/AmazingFeature)<br></br>
 -Open a pull request (from feature/AmazingFeature to dev)<br></br>
 -Create a new issue on GitHub<br></br>
