@@ -25,6 +25,7 @@ const toggleTheme = () => {
 export default function Home() {
   return (
     <div>
+    <link rel="icon" href="/favicon.ico" />
     <Disclosure as="nav" className="bg-gray-800 fixed w-full top-0 left-0">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between position:fixed top-0">
