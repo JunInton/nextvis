@@ -1,25 +1,22 @@
-
 'use client'
 
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu} from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { MdDarkMode } from "react-icons/md";
 
 import Image from "next/image";
+import Link from "next/link"
 
 const navigation = [
-  { name: 'Main', href: '#', current: true },
+  { name: 'Home', href: '#', current: true },
   { name: 'Team', href: '#team', current: false },
-  // { name: 'Projects', href: '/projects', current: false },
   { name: 'Release Notes', href: '/release', current: false },
-  { name: 'Article', href:"", current: false},
+  // { name: 'Medium Article', href:"https://medium.com/@juninton/next-js-middleware-visualization-bringing-clarity-to-the-chaos-542e58160d1e", current: false},
 ]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
-
-
 
 const toggleTheme = () => {
   document.documentElement.classList.toggle('dark')
@@ -42,14 +39,16 @@ export default function Home() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-            <Image
-              src="/icon.png"
-              alt="NextVis Logo"
-              width={32}
-              height={32}
-              className="rounded-full"
-              priority // Ensures fast loading for crucial assets
-            />
+            <Link href="https://marketplace.visualstudio.com/items?itemName=NextVis.NextVis">
+              <Image
+                src="/icon.png"
+                alt="NextVis Logo"
+                width={42}
+                height={42}
+                className="rounded-full"
+                priority // Ensures fast loading for crucial assets
+              />
+            </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -69,65 +68,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-            </button>
-            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-background dark:text-background hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"><MdDarkMode/></button>
-              <a href="/docs"
-              className="px-3 py-2 border border-background dark:border-foreground bg-cyan-300 dark:bg-cyan-300 text-foreground rounded-full text-sm hover:bg-foreground/5"
-            >
-              Get Started
-            </a>
-              {/* Profile dropdown */}
-            <Menu as="div" className="relative ml-3">
-              <div>
-                {/* <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">Open user menu</span>
-                  <Image
-                    alt="Your Profile"
-                    src="/blank-profile.png"
-                    width={32}
-                    height={32}
-                    className="rounded-full"
-                    loading="lazy"
-                  />
-                </MenuButton> */}
-              </div>
+          <div className="absolute inset-y-0 right-0 flex space-x-4 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-yellow-400 dark:text-white hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"><MdDarkMode/></button>
               
-              {/* <MenuItems
-                transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
-                  >
-                    Your Profile
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
-                  >
-                    Settings
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
-                  >
-                    Sign out
-                  </a>
-                </MenuItem>
-              </MenuItems> */}
-            </Menu>
+            <Link href= "https://medium.com/@juninton/next-js-middleware-visualization-bringing-clarity-to-the-chaos-542e58160d1e">
+                <Image src="Medium-Icon-White.svg" width={36} height={36} alt="Medium icon" className="rounded-full"/>
+              </Link>
+              <a href="/docs"
+              className="px-3 py-2 border border-white bg-[#001A2F] text-white rounded-full text-sm hover:bg-foreground/5"
+            >
+              Documentation
+            </a>
           </div>
         </div>
       </div>
@@ -154,12 +105,12 @@ export default function Home() {
     <div className="min-h-screen bg-foreground dark:bg-background"> {/* bg-[image:url(/icon.png)] */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 mt-16">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground p-20">
+          <h1 className="text-5xl font-bold tracking-tight mb-6 text-background dark:text-foreground pt-10">
             NextVis
           </h1>
           <p className="text-xl text-background dark:text-foreground mb-8 max-w-3xl mx-auto">
             Manage complex middleware chains in your
-            next.js codebase
+            Next.js codebase
           </p>
           <div className="flex gap-4 justify-center">
             <a
@@ -185,17 +136,18 @@ export default function Home() {
             {/* <a
               href="/docs"
               className="px-6 py-3 border border-background dark:border-foreground bg-foreground dark:bg-background text-background dark:text-foreground rounded-lg font-medium hover:bg-foreground/5 transition-colors"
-            >
+              >
               Documentation
-            </a> */}
+              </a> */}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+              <Image src="/dendrogram-demo-gif.gif" width={800} height={300} className='rounded-xl border border-background mx-auto dark:border-foreground' alt="dendrogram-demo"/>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 pt-20">
           {[
             {
               title: "Middleware Visualization",
               description:
-                "Specify your top level middleware and nextflow will find the rest",
+                "Specify your top level middleware and NextVis will find the rest",
               icon: "⚡️",
             },
             {
@@ -223,12 +175,12 @@ export default function Home() {
             </div>
           ))}
           </div>
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 id ="howTo" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
             How to...
           </h2>
             <Image src="/fullscreen-demo-gif.gif" width={1280} height={300} className='rounded-xl border border-background dark:border-foreground' alt="fullscreen-demo"/>
-        </div>
+        </div> */}
         <div className="mb-20">
           <h2 id ="team" className="text-3xl font-bold text-center mb-12 text-background dark:text-foreground">
             Meet the Team
@@ -273,20 +225,21 @@ export default function Home() {
                 key={index}
                 className="flex flex-col items-center p-8 rounded-xl border border-background hover:scale-110 transition-shadow bg-foreground dark:bg-background dark:border-foreground"
               >
-                <div className="w-32 h-32 relative rounded-full overflow-hidden mb-6 bg-foreground/5">
+                <div className="h-20 w-20 md:w-32 md:h-32 lg:w-40 lg:h-40 relative rounded-full overflow-hidden aspect-square mb-6 bg-foreground/5">
                   <Image
                     src={member.image}
                     alt={member.firstName}
                     fill
                     className="object-cover"
                     loading="lazy"
-                    sizes="(max-width: 640px) 80px, (max-width: 1024px) 128px, 160px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     style={{
                       objectPosition:
                         member.firstName === "Brendan"
                           ? "center -10px"
                           : "center",
-                    }}
+                    }
+                  }
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-background dark:text-foreground text-center">
@@ -300,7 +253,7 @@ export default function Home() {
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-background dark:text-foreground hover:text-foreground transition-colors"
+                    className="text-background pt-2 dark:text-foreground hover:text-gray-400 transition-colors"
                     aria-label={`${member.firstName}'s GitHub`}
                   >
                     <svg
@@ -320,8 +273,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <footer className="text-center text-background dark:text-foreground">
-          <p>Built with ❤️ by the oslabs community</p>
+        <footer className="text-center text-background dark:text-foreground mb-10">
+          <p>Built with ❤️ by the OSLabs community</p>
         </footer>
       </main>
     </div>
