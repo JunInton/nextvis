@@ -63,12 +63,6 @@ export default function Documentation() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-            </button> */}
-            {/* <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-foreground dark:text-foreground hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"></button> */}
               <a href="/docs"
               className="px-3 py-2 border border-white bg-[#001A2F] text-white rounded-full text-sm hover:bg-foreground/5"
             >
@@ -285,6 +279,7 @@ export default function Documentation() {
           3. Click on <span className="bg-slate-500 p-0.5 text-white">Load Middleware File</span> and provide the path to your middleware file.<br></br>
           4. View the interactive middleware diagram in the webview panel.
         </p>
+        <Image src="/fullscreen-demo-gif.gif" width={800} height={500} className='rounded-xl border border-background mx-auto my-10 dark:border-foreground' alt="fullscreen-demo"/>
         <div className="max-w-none max-w-6xl mx-auto px-4 pt-6 pb-4 text-2xl text-black">
           <h2><strong>Requirements</strong></h2>
         </div>
@@ -300,6 +295,7 @@ export default function Documentation() {
           <li><strong>Interactive Graph</strong>: Clickable nodes for expanding/collapsing details.</li>
           <li>*<strong>Metrics Panel</strong>: Provides details for performance of the extension</li>
         </ul>
+        <Image src="/metrics-demo-gif.gif" width={800} height={500} className='rounded-xl border border-background mx-auto my-10 dark:border-foreground' alt="metrics-demo"/>
         <p className="text-xs p-4">
           *Metrics currently pertain to the extension itself. Planning to measure middleware performance in the future.
         </p>
@@ -307,7 +303,7 @@ export default function Documentation() {
           <h2 ><strong>Troubleshooting</strong></h2>
         </div>
         <ul className="list-none list-inside">
-          <li><strong>No visualization appears?</strong> Ensure the provided middleware filepath is correct.</li>
+          <li><strong>No visualization appears?</strong> Ensure the provided middleware file path is correct.</li>
         </ul>
         <div className="max-w-none max-w-6xl mx-auto px-4 pt-6 pb-4 text-2xl">
           <h2><strong>Contributing</strong></h2>

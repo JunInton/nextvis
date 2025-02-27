@@ -113,11 +113,25 @@ export default function Home() {
             Next.js codebase
           </p>
           <div className="flex gap-4 justify-center">
+          <a
+            href="vscode:extension/NextVis.NextVis"
+            className="flex items-center bg-background dark:bg-foreground text-foreground dark:text-background hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-lg transition"
+          >
+            <Image
+              src="https://code.visualstudio.com/assets/images/code-stable.png"
+              alt="VS Code Logo"
+              width={24}
+              height={24}
+              className="mr-2"
+            />
+            Install in VS Code
+          </a>
+            
             <a
               href="https://github.com/oslabs-beta/NextVis"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-background dark:bg-foreground text-foreground dark:text-background rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
+              className="px-6 py-3 bg-background dark:bg-foreground text-foreground dark:text-background rounded-lg font-bold hover:opacity-90 font-bold transition-opacity flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"

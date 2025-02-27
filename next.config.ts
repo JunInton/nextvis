@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       "www.vectorlogo.zone",
       "raw.githubusercontent.com",
       "global.discourse-cdn.com",
+      "code.visualstudio.com",
     ],
   },
   webpack: (config) => {
