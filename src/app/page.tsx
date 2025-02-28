@@ -12,6 +12,7 @@ const navigation = [
   { name: 'Team', href: '#team', current: false },
   { name: 'Release Notes', href: '/release', current: false },
   // { name: 'Medium Article', href:"https://medium.com/@juninton/next-js-middleware-visualization-bringing-clarity-to-the-chaos-542e58160d1e", current: false},
+  // { name: 'Documentation', href: '/docs', current: false},
 ]
 
 function classNames(...classes: string[]) {
@@ -69,10 +70,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex space-x-4 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="absolute inset-y-0 right-0 flex space-x-4 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden sm:flex">
             <button onClick={toggleTheme} className="flex justify-center items-center m-auto text-lg w-fit text-yellow-400 dark:text-white hover:opacity-90 transition-color duration-200 ease-in-out rounded-lg font-semibold py-[5px] px-2"><MdDarkMode/></button>
               
-            <Link href= "https://medium.com/@juninton/next-js-middleware-visualization-bringing-clarity-to-the-chaos-542e58160d1e">
+            <Link href= "https://medium.com/@juninton/542e58160d1e">
                 <Image src="Medium-Icon-White.svg" width={36} height={36} alt="Medium icon" className="rounded-full"/>
               </Link>
               <a href="/docs"
@@ -100,6 +101,13 @@ export default function Home() {
               {item.name}
             </DisclosureButton>
           ))}
+          <DisclosureButton
+            as="a"
+            href="/docs"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          >
+            Documentation
+          </DisclosureButton>
         </div>
       </DisclosurePanel>
     </Disclosure>
@@ -180,13 +188,16 @@ export default function Home() {
           ].map((feature, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl border border-background dark:border-foreground hover:shadow-lg transition-shadow bg-foreground dark:bg-background text-background dark:text-foreground"
+              className="group relative p-6 rounded-xl border border-background dark:border-foreground hover:shadow-lg transition-shadow bg-foreground dark:bg-background text-background dark:text-foreground
+              hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              <div className="text-3xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2 text-background dark:text-foreground">
+              <div className="flex items-center justify-center text-3xl mb-4 transition-opacity duration-200 group-hover:opacity-0 group-hover:invisible">{feature.icon}</div>
+              <h3 className="flex items-center justify-center text-xl font-semibold mb-2 text-background dark:text-foregroundtransition-opacity duration-200
+                group-hover:opacity-0 group-hover:invisible">
                 {feature.title}
               </h3>
-              <p className="text-foreground/70">{feature.description}</p>
+              <p className="text-foreground/70 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 
+                absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full p-6 text-center">{feature.description}</p>
             </div>
           ))}
           </div>
@@ -238,7 +249,8 @@ export default function Home() {
             ].map((member, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-8 rounded-xl border border-background hover:scale-110 transition-shadow bg-foreground dark:bg-background dark:border-foreground"
+                className="flex flex-col items-center p-8 rounded-xl border border-background bg-foreground dark:bg-background dark:border-foreground
+                  hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <div className="h-20 w-20 md:w-32 md:h-32 lg:w-40 lg:h-40 relative rounded-full overflow-hidden aspect-square mb-6 bg-foreground/5">
                   <Image
